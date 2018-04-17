@@ -37,26 +37,30 @@ bash ./download_dataset.sh facades
 
 '''bash
 $ python3 train.py
+'''
 
 If you need help
 '''bash
 $ python3 train.py -h
+'''
 
 If you want to continue training from the point you halted before, then  set 'load_model' parameter.
 '''bash
 $ python3 train.py --load_model path_of_your_model
+'''
 
 ## Export model
 you can export model for inference
 '''bash
 $ python3 export_graph.py --checkpoint_dir path_of_your_checkpoint --XtoY_model facadesX2Y.pb --YtoX_model facedesY2X.pb --image_size 256
+'''
 
 ## Inference
 
 For example:
 '''bash
-python3 inference.py --model pretrained/your_model.pb --input input.jpg --output output.jpg --image_size 256
-
+$ python3 inference.py --model pretrained/your_model.pb --input input.jpg --output output.jpg --image_size 256
+'''
 ## Pretrained models
 pretrained models of facades: https://github.com/jijeng/CycleGAN/releases
 
