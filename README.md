@@ -10,8 +10,9 @@
 ## Datasets
 Download the datasets using the following script:
 ```bash
-bash ./download_dataset.sh facades
+$ ./download_dataset.sh facades
 ```
+
 - `facades`: 400 images from the [CMP Facades dataset](http://cmp.felk.cvut.cz/~tylecr1/facade/).
 - `cityscapes`: 2975 images from the [Cityscapes training set](https://www.cityscapes-dataset.com/).
 - `maps`: 1096 training images scraped from Google Maps.
@@ -35,32 +36,32 @@ bash ./download_dataset.sh facades
 
 ## Training
 
-'''bash
+```bash
 $ python3 train.py
-'''
+```
 
 If you need help
-'''bash
+```bash
 $ python3 train.py -h
-'''
+```
 
 If you want to continue training from the point you halted before, then  set 'load_model' parameter.
-'''bash
+```bash
 $ python3 train.py --load_model path_of_your_model
-'''
+```
 
 ## Export model
 you can export model for inference
-'''bash
+```bash
 $ python3 export_graph.py --checkpoint_dir path_of_your_checkpoint --XtoY_model facadesX2Y.pb --YtoX_model facedesY2X.pb --image_size 256
-'''
+```
 
 ## Inference
 
 For example:
-'''bash
+```bash
 $ python3 inference.py --model pretrained/your_model.pb --input input.jpg --output output.jpg --image_size 256
-'''
+```
 ## Pretrained models
 pretrained models of facades: https://github.com/jijeng/CycleGAN/releases
 
